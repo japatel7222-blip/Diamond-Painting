@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diamond Painting | Acworth, GA</title>
+  <meta name="description" content="Diamond Painting in Acworth, Georgia. Interior painting, cabinet refinishing, exterior painting, trim, murals, and detailed home finishes." />
+  <style>
+    :root{
+      --pearl:#fbfcfb;--pearl2:#f5fbff;--pearl3:#fff7fb;--ink:#0c1522;--muted:#65717f;--line:rgba(13,32,54,.12);
+      --blue:#1f78ff;--blue2:#74d7ff;--deep:#061a35;--white:#fff;--radius:34px;--shadow:0 34px 90px rgba(23,73,137,.13);
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth;background:var(--pearl)}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--ink);overflow-x:hidden;background:
+      radial-gradient(circle at 18% 10%,rgba(141,230,255,.34),transparent 26%),
+      radial-gradient(circle at 82% 18%,rgba(255,200,232,.38),transparent 30%),
+      radial-gradient(circle at 50% 45%,rgba(226,255,242,.36),transparent 34%),
+      linear-gradient(135deg,#fff 0%,#f7fdff 38%,#fff8fd 70%,#fff 100%);
+    }
+    body:before{content:"";position:fixed;inset:-20%;pointer-events:none;z-index:-1;background:
+      radial-gradient(circle at 42% 28%,rgba(255,255,255,.86),transparent 18%),
+      conic-gradient(from 120deg at 52% 38%,rgba(117,215,255,.12),rgba(255,204,230,.16),rgba(222,255,239,.18),rgba(117,215,255,.12));filter:blur(18px);}
+    a{text-decoration:none;color:inherit}.wrap{width:min(1220px,calc(100% - 42px));margin-inline:auto}.serif{font-family:Georgia,"Times New Roman",serif}
+
+    .nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:50;width:min(1180px,calc(100% - 32px));display:flex;align-items:center;justify-content:space-between;padding:12px 14px 12px 20px;border:1px solid rgba(255,255,255,.75);border-radius:999px;background:rgba(255,255,255,.60);backdrop-filter:blur(24px);box-shadow:0 24px 70px rgba(31,120,255,.11)}
+    .brand{display:flex;align-items:center;gap:11px;font-family:Georgia,serif;font-size:22px;letter-spacing:-.045em}.gem{width:30px;height:30px;border-radius:10px;transform:rotate(45deg);border:1px solid rgba(31,120,255,.28);background:linear-gradient(135deg,#fff 0%,#dffaff 36%,#fff2fb 68%,#64c8ff 100%);box-shadow:inset 0 1px 14px rgba(255,255,255,.9),0 10px 28px rgba(31,120,255,.2)}
+    .links{display:flex;align-items:center;gap:24px;font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:#425267}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:14px 20px;background:var(--ink);color:#fff;font-size:12px;text-transform:uppercase;letter-spacing:.15em;font-weight:750;box-shadow:0 18px 45px rgba(6,26,53,.18)}.btn.light{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:none}
+
+    .paint-stage{position:fixed;inset:0;z-index:5;pointer-events:none;overflow:hidden}.paint-ribbon{position:absolute;left:50%;top:0;width:min(860px,72vw);height:var(--paintH,0px);transform:translateX(-50%);background:linear-gradient(180deg,rgba(31,120,255,.98),rgba(67,171,255,.9) 48%,rgba(138,225,255,.62) 80%,rgba(255,255,255,0));clip-path:polygon(4% 0,96% 0,92% 100%,8% 100%);filter:url(#paintWobble);opacity:.96;mix-blend-mode:multiply;box-shadow:inset 0 0 42px rgba(255,255,255,.25)}
+    .paint-ribbon:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 18% 30%,rgba(255,255,255,.24),transparent 12%),radial-gradient(circle at 76% 18%,rgba(255,255,255,.2),transparent 11%),linear-gradient(90deg,rgba(255,255,255,.18),transparent 18%,rgba(255,255,255,.17) 48%,transparent 70%)}
+    .paint-ribbon:after{content:"";position:absolute;left:7%;right:7%;bottom:-30px;height:60px;background:linear-gradient(90deg,transparent,rgba(31,120,255,.65),rgba(116,215,255,.7),transparent);border-radius:0 0 50% 50%;filter:blur(6px)}
+    .roller{position:absolute;left:50%;top:calc(var(--paintH,0px) - 30px);width:min(900px,78vw);height:60px;transform:translateX(-50%);border-radius:999px;background:linear-gradient(180deg,#fafeff,#d9f4ff 32%,#2b8bff 55%,#1064dd 100%);border:1px solid rgba(8,55,120,.18);box-shadow:0 22px 70px rgba(31,120,255,.28),inset 0 10px 22px rgba(255,255,255,.58)}
+    .roller:before{content:"";position:absolute;right:-68px;top:26px;width:72px;height:8px;background:#0d1e32;border-radius:99px}.roller:after{content:"";position:absolute;right:-90px;top:25px;width:9px;height:92px;background:#0d1e32;border-radius:999px;transform:rotate(16deg);transform-origin:top center}.drip{position:absolute;top:calc(var(--paintH,0px) + 10px);width:10px;height:var(--d,40px);border-radius:999px;background:linear-gradient(#2793ff,rgba(120,217,255,.15));opacity:var(--o,.4);left:var(--x,50%);transform:translateY(-16px)}
+
+    .hero{min-height:124vh;position:relative;display:flex;align-items:flex-start;padding:142px 0 0;overflow:hidden}.hero .wrap{position:sticky;top:112px;z-index:9}.eyebrow{display:inline-flex;align-items:center;gap:12px;border:1px solid rgba(255,255,255,.78);background:rgba(255,255,255,.62);backdrop-filter:blur(16px);border-radius:999px;padding:10px 14px;color:#4e6378;font-size:12px;text-transform:uppercase;letter-spacing:.17em;box-shadow:0 18px 52px rgba(31,120,255,.08)}.stars{color:#1f78ff;letter-spacing:.08em}.hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.075em;line-height:.82;font-size:clamp(68px,10vw,156px);max-width:1000px;margin:28px 0 0}.hero-sub{font-size:clamp(18px,2vw,24px);line-height:1.65;color:#516174;max-width:700px;margin:30px 0 0}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}.orb{position:absolute;right:6vw;top:185px;width:min(390px,35vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 33% 24%,#fff 0 10%,rgba(255,255,255,.85) 11% 22%,transparent 23%),radial-gradient(circle at 72% 66%,rgba(90,235,205,.42),transparent 26%),radial-gradient(circle at 63% 38%,rgba(255,179,226,.44),transparent 28%),radial-gradient(circle at 30% 66%,rgba(119,220,255,.5),transparent 31%),linear-gradient(145deg,#fff,#edf9ff 45%,#fff2fb);box-shadow:inset -22px -22px 60px rgba(45,83,118,.1),0 36px 90px rgba(31,120,255,.14);z-index:1;opacity:.9}.orb:after{content:"";position:absolute;left:18%;right:18%;bottom:-12%;height:18%;background:rgba(69,93,115,.12);filter:blur(18px);border-radius:50%}
+
+    section{position:relative;z-index:10}.panel{background:rgba(255,255,255,.68);backdrop-filter:blur(20px);border-top:1px solid rgba(255,255,255,.72);border-bottom:1px solid rgba(255,255,255,.72);padding:118px 0}.section-title{font-family:Georgia,serif;font-weight:500;letter-spacing:-.065em;line-height:.9;font-size:clamp(46px,6.4vw,92px);margin:0}.lead{font-size:19px;line-height:1.75;color:var(--muted);max-width:720px}.grid2{display:grid;grid-template-columns:.82fr 1.18fr;gap:58px;align-items:start}.services{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.card{border:1px solid rgba(255,255,255,.84);background:rgba(255,255,255,.74);border-radius:30px;padding:32px;box-shadow:0 24px 70px rgba(31,120,255,.07);min-height:230px;transition:.3s ease}.card:hover{transform:translateY(-7px);box-shadow:0 32px 90px rgba(31,120,255,.14)}.num{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#1f78ff;margin-bottom:34px}.card h3{font-family:Georgia,serif;font-size:31px;letter-spacing:-.045em;line-height:1;margin:0}.card p{color:var(--muted);line-height:1.68;margin:15px 0 0}
+    .showcase{padding:120px 0}.show-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:stretch}.photo{min-height:560px;border-radius:44px;border:1px solid rgba(255,255,255,.86);box-shadow:var(--shadow);overflow:hidden;background:#fff;position:relative}.photo svg{width:100%;height:100%;display:block}.photo.small{min-height:268px}.stack{display:grid;gap:24px}.caption{position:absolute;left:26px;bottom:24px;background:rgba(255,255,255,.72);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.82);border-radius:999px;padding:12px 16px;font-size:12px;text-transform:uppercase;letter-spacing:.15em;color:#314258}
+    .process{padding:110px 0}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:42px}.step{padding:28px;border-top:1px solid var(--line)}.step b{font-family:Georgia,serif;font-size:44px;font-weight:500;color:#1f78ff}.step p{line-height:1.65;color:var(--muted)}
+    .reviews{padding:118px 0;background:rgba(255,255,255,.55)}.quote{max-width:980px;margin-top:42px;border-radius:46px;background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.86);box-shadow:var(--shadow);padding:58px}.quote p{font-family:Georgia,serif;font-size:clamp(36px,5vw,66px);line-height:1.03;letter-spacing:-.06em;margin:26px 0}.quote strong{font-size:14px;text-transform:uppercase;letter-spacing:.15em;color:#526274}.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}.mini{background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.84);border-radius:28px;padding:26px;color:var(--muted);line-height:1.65}.mini strong{display:block;color:var(--ink);margin-top:16px}
+    .contact{padding:120px 0}.contact-card{border-radius:52px;padding:72px;background:linear-gradient(135deg,#071d3b,#0e3267 48%,#1f78ff);color:#fff;display:grid;grid-template-columns:1fr .78fr;gap:46px;box-shadow:0 38px 100px rgba(31,120,255,.28);overflow:hidden;position:relative}.contact-card:before{content:"";position:absolute;right:-130px;top:-120px;width:390px;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#fff,rgba(116,215,255,.45),transparent 68%);opacity:.6}.contact h2{font-family:Georgia,serif;font-weight:500;letter-spacing:-.065em;line-height:.9;font-size:clamp(46px,7vw,96px);margin:0}.contact p{color:#dcefff;line-height:1.75;font-size:18px}.info{display:grid;gap:14px;position:relative}.info a,.info div{border:1px solid rgba(255,255,255,.2);border-radius:25px;padding:23px;background:rgba(255,255,255,.08);backdrop-filter:blur(12px)}.info span{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:#b8d9ff;margin-bottom:8px}.info b{font-size:22px}.footer{padding:36px 0;color:#6b7785;font-size:14px}.footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}.reveal.on{opacity:1;transform:none}
+    @media(max-width:900px){.links a:not(.btn){display:none}.grid2,.show-grid,.contact-card{grid-template-columns:1fr}.services,.steps,.mini-grid{grid-template-columns:1fr}.orb{opacity:.32;width:340px;right:-90px}.hero{min-height:112vh}.paint-ribbon{width:82vw}.roller{width:86vw}.roller:before,.roller:after{display:none}.contact-card{padding:42px}.quote{padding:34px}.photo{min-height:420px}.hero h1{font-size:clamp(56px,18vw,92px)}}
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" aria-hidden="true"><filter id="paintWobble"><feTurbulence type="fractalNoise" baseFrequency="0.012 0.04" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="10"/></filter></svg>
+  <div class="paint-stage" aria-hidden="true"><div class="paint-ribbon"></div><div class="roller"></div><i class="drip" style="--x:31%;--d:46px;--o:.42"></i><i class="drip" style="--x:48%;--d:72px;--o:.34"></i><i class="drip" style="--x:67%;--d:38px;--o:.38"></i></div>
+  <nav class="nav"><a href="#top" class="brand"><span class="gem"></span><span>Diamond Painting</span></a><div class="links"><a href="#services">Services</a><a href="#work">Work</a><a href="#reviews">Reviews</a><a class="btn" href="tel:4044848013">Call Now</a></div></nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="orb" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="reveal">
+          <div class="eyebrow"><span class="stars">★★★★★</span><span>4.7 rating · Acworth, Georgia</span></div>
+          <h1>Diamond-level paintwork.</h1>
+          <p class="hero-sub">Interior painting, cabinet refinishing, exterior updates, trim, and custom finishes for homes that need a sharper, cleaner look.</p>
+          <div class="hero-actions"><a class="btn" href="tel:4044848013">Request an Estimate</a><a class="btn light" href="#work">View the Finish</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="panel">
+      <div class="wrap grid2">
+        <div class="reveal"><h2 class="section-title">Clean prep. Smooth finish. No mess.</h2><p class="lead">The best paint job is quiet: crisp lines, even coverage, protected floors, finished edges, and a room that feels brand new when the tools leave.</p></div>
+        <div class="services">
+          <div class="card reveal"><div class="num">01</div><h3>Interior Painting</h3><p>Walls, ceilings, bedrooms, living spaces, hallways, and full-home color changes.</p></div>
+          <div class="card reveal"><div class="num">02</div><h3>Cabinet Refinishing</h3><p>Kitchen and bath cabinets refinished with a smooth, furniture-like appearance.</p></div>
+          <div class="card reveal"><div class="num">03</div><h3>Exterior Painting</h3><p>Siding, trim, doors, shutters, porches, and exterior details refreshed with care.</p></div>
+          <div class="card reveal"><div class="num">04</div><h3>Murals & Details</h3><p>Accent walls, custom murals, trim work, baseboards, and finish touch-ups.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="showcase">
+      <div class="wrap show-grid">
+        <div class="photo reveal">
+          <svg viewBox="0 0 900 760" preserveAspectRatio="none"><defs><linearGradient id="g1" x1="0" x2="1"><stop stop-color="#fafdff"/><stop offset=".45" stop-color="#eefbff"/><stop offset="1" stop-color="#fff6fb"/></linearGradient></defs><rect width="900" height="760" fill="url(#g1)"/><rect x="80" y="84" width="740" height="560" rx="42" fill="#fff"/><rect x="128" y="140" width="250" height="430" rx="22" fill="#edf7ff"/><rect x="430" y="140" width="290" height="430" rx="22" fill="#f6fbff"/><rect x="462" y="190" width="225" height="320" rx="16" fill="#ffffff" stroke="#d9eaf7"/><path d="M134 590h590" stroke="#d7e8f6" stroke-width="10"/><path d="M210 208c32-26 85-27 118 2 30 26 38 76 20 119-21 50-72 80-136 80" fill="none" stroke="#1f78ff" stroke-width="20" stroke-linecap="round"/><circle cx="245" cy="249" r="54" fill="#092242"/><path d="M308 386l138-90" stroke="#0e2035" stroke-width="12" stroke-linecap="round"/><rect x="440" y="266" width="180" height="55" rx="28" fill="#1f78ff"/></svg>
+          <span class="caption">Interior finish</span>
+        </div>
+        <div class="stack">
+          <div class="photo small reveal"><svg viewBox="0 0 720 330" preserveAspectRatio="none"><rect width="720" height="330" fill="#fafdff"/><rect x="60" y="55" width="600" height="220" rx="34" fill="#fff"/><rect x="112" y="102" width="145" height="132" rx="16" fill="#e9f7ff"/><rect x="292" y="102" width="145" height="132" rx="16" fill="#d7efff"/><rect x="472" y="102" width="145" height="132" rx="16" fill="#1f78ff"/><path d="M110 260h510" stroke="#d7e8f6" stroke-width="8"/></svg><span class="caption">Color clarity</span></div>
+          <div class="photo small reveal"><svg viewBox="0 0 720 330" preserveAspectRatio="none"><rect width="720" height="330" fill="#fff8fd"/><rect x="70" y="50" width="270" height="230" rx="24" fill="#fff"/><rect x="384" y="50" width="250" height="230" rx="24" fill="#eef9ff"/><path d="M432 80v160" stroke="#1f78ff" stroke-width="34" stroke-linecap="round"/><path d="M432 80h105" stroke="#0d1e32" stroke-width="11" stroke-linecap="round"/><rect x="526" y="58" width="105" height="44" rx="22" fill="#fff" stroke="#74d7ff"/><path d="M100 270h500" stroke="#d7e8f6" stroke-width="8"/></svg><span class="caption">Roller-smooth walls</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process"><div class="wrap"><h2 class="section-title reveal">A sharper process.</h2><div class="steps"><div class="step reveal"><b>01</b><p>Walk the space and define the finish.</p></div><div class="step reveal"><b>02</b><p>Protect floors, fixtures, cabinets, and furniture.</p></div><div class="step reveal"><b>03</b><p>Prep surfaces before the first coat goes on.</p></div><div class="step reveal"><b>04</b><p>Review the final details before wrap-up.</p></div></div></div></section>
+
+    <section id="reviews" class="reviews"><div class="wrap"><h2 class="section-title reveal">What clients noticed.</h2><div class="quote reveal"><div class="stars">★★★★★</div><p>“Absolutely amazed at the work they did. My walls were in rough shape and they made them look brand new.”</p><strong>— Brett Veasey</strong></div><div class="mini-grid"><div class="mini reveal">“Fantastic experience from start to finish. Professional, polite, and meticulous.”<strong>Kay Wilson</strong></div><div class="mini reveal">“My kitchen cabinets were painted and I couldn’t be more impressed.”<strong>Erica J</strong></div><div class="mini reveal">“They showed up on time and communicated clearly throughout the project.”<strong>Ashi Rhea</strong></div></div></div></section>
+
+    <section class="contact" id="contact"><div class="wrap contact-card"><div><h2>Start with the room that matters most.</h2><p>Call Diamond Painting for interior painting, cabinet refinishing, exterior painting, trim, and custom detail work in Acworth and nearby areas.</p><div class="hero-actions"><a class="btn light" href="tel:4044848013">Call (404) 484-8013</a></div></div><div class="info"><a href="tel:4044848013"><span>Phone</span><b>(404) 484-8013</b></a><div><span>Location</span><b>156 Boones Ridge Pkwy, Acworth, GA</b></div><div><span>Rating</span><b>4.7 stars · 27+ reviews</b></div></div></div></section>
+  </main>
+  <footer class="footer"><div class="wrap"><span>Diamond Painting · Acworth, Georgia</span><span>Interior · Exterior · Cabinets · Murals</span></div></footer>
+
+  <script>
+    const root=document.documentElement;const maxPaint=window.innerHeight*0.78;
+    function updatePaint(){const y=window.scrollY;const h=Math.max(0,Math.min(maxPaint,y*1.25));root.style.setProperty('--paintH',h+'px');document.querySelectorAll('.drip').forEach((d,i)=>{d.style.opacity=y>25?getComputedStyle(d).getPropertyValue('--o'):.0;});}
+    updatePaint();addEventListener('scroll',updatePaint,{passive:true});addEventListener('resize',updatePaint);
+    const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')})},{threshold:.16});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>
